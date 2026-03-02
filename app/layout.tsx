@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-[#f8f5f0] text-slate-900 antialiased">
+        {/* Accessibility Skip Link */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-amber-600 text-white px-3 py-2 rounded"
@@ -33,8 +35,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </div>
         </div>
 
-      <header className="sticky top-0 z-50 border-b border-amber-200 bg-white shadow-sm">
-  <nav className="max-w-7.5xl mx-auto flex items-center justify-between px-6 py-3">
+<nav className="sticky top-0 z-50 border-b border-amber-200 bg-white shadow-sm">
+  <div className="max-w-7.5xl mx-auto flex items-center justify-between px-6 py-3">
     
     {/* LEFT — Logo + Name */}
     <div className="flex items-center gap-3">
@@ -89,8 +91,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </a>
 
     </div>
-  </nav>
-</header>
+  </div>
+</nav>
 
 
         {/* Page content */}
