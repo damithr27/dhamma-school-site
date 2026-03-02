@@ -81,7 +81,7 @@ export default function HomePage() {
           <FadeInSection>
             {/* Sinhala heading */}
             <h2 className="font-sinhala text-xl md:text-2xl tracking-wide mb-1">
-              ශ්‍රී බෝධිරාජාරාම ධම්ම පාසල - පිළවල
+              ශ්‍රී බෝධිරාජාරාම දහම් පාසල - පිළවල
             </h2>
             {/* English heading */}
             <h1 className="mt-1 text-3xl md:text-5xl font-bold tracking-wide">
