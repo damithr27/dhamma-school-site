@@ -53,16 +53,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </div>
 
     {/* CENTER — Nav Links */}
-   <ul className="flex flex-wrap items-center gap-4 text-xs md:text-sm font-semibold text-[#5A3A1E]">
-  <li><a href="/" className="hover:text-amber-600 transition">Home</a></li>
-  <li><a href="/about" className="hover:text-amber-600 transition">About</a></li>
-  <li><a href="/history" className="hover:text-amber-600 transition">History</a></li>
-  <li><a href="/teaching" className="hover:text-amber-600 transition">Teaching</a></li>
-  <li><a href="/classes" className="hover:text-amber-600 transition">Classes</a></li>
-  <li><a href="/events" className="hover:text-amber-600 transition">Events</a></li>
-  <li><a href="/gallery" className="hover:text-amber-600 transition">Gallery</a></li>
-  <li><a href="/contact" className="hover:text-amber-600 transition">Contact</a></li>
-</ul>
+    <ul className="hidden lg:flex items-center gap-8 text-sm font-semibold text-[#5A3A1E]">
+      <li><a href="/" className="hover:text-amber-600 transition">Home</a></li>
+      <li><a href="/about" className="hover:text-amber-600 transition">About</a></li>
+      <li><a href="/history" className="hover:text-amber-600 transition">History</a></li>
+      <li><a href="/teaching" className="hover:text-amber-600 transition">Teaching</a></li>
+      <li><a href="/classes" className="hover:text-amber-600 transition">Classes</a></li>
+      <li><a href="/events" className="hover:text-amber-600 transition">Events</a></li>
+      <li><a href="/gallery" className="hover:text-amber-600 transition">Gallery</a></li>
+      <li><a href="/contact" className="hover:text-amber-600 transition">Contact</a></li>
+    </ul>
+
     {/* RIGHT — Lang, Registration, Admin */}
     <div className="flex items-center gap-4">
       
