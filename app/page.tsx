@@ -59,7 +59,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-60 mix-blend-multiply"
           style={{
             backgroundImage:
-              "url('/images/bg.jpg')", // put image in public/images
+              "url('/images/bg.jpg')", 
           }}
         />
 
@@ -280,3 +280,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+

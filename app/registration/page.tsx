@@ -109,7 +109,7 @@ export default function RegistrationPage() {
                 className="rounded-2xl bg-white/90 text-[#5A3A1E] shadow-sm border border-amber-100 px-5 py-4 text-left hover:shadow-md hover:border-amber-300 transition"
               >
                 <h3 className="font-semibold text-amber-800 mb-1">
-                  New Student Registration
+                  නවක සිසුන් ලියාපදිංචිය
                 </h3>
                 <p>
                   Use this form to register a child as a new student of Sri
@@ -121,7 +121,7 @@ export default function RegistrationPage() {
                 className="rounded-2xl bg-white/90 text-[#5A3A1E] shadow-sm border border-amber-100 px-5 py-4 text-left hover:shadow-md hover:border-amber-300 transition"
               >
                 <h3 className="font-semibold text-amber-800 mb-1">
-                  Prefect Application
+                  ශිෂ්‍යය නායක අයදුම් පත්‍රය
                 </h3>
                 <p>
                   For existing students who wish to apply for Dhamma school
@@ -138,250 +138,418 @@ export default function RegistrationPage() {
         {/* New Student Registration */}
         <section id="new-student">
           <FadeInSection>
-            <h2 className="section-title">New Student Registration</h2>
+            <h2 className="section-title">නවක සිසුන් ලියාපදිංචිය</h2>
             <p className="mt-3 text-sm md:text-base text-slate-700">
               Please fill in the details of the student and parent/guardian.
             </p>
 
             <form
-              className="mt-5 grid gap-4 rounded-2xl bg-white shadow-sm border border-amber-50 px-5 py-5 text-sm"
-              onSubmit={(e) => handleSubmit(e, "student")}
-            >
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    Student&apos;s Full Name
-                  </label>
-                  <input
-                    name="studentName"
-                    type="text"
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-slate-700 mb-1">Date of Birth</label>
-                  <input
-                    name="dob"
-                    type="date"
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-              </div>
+  className="mt-5 grid gap-4 rounded-2xl bg-white shadow-sm border border-amber-50 px-5 py-5 text-sm"
+  onSubmit={(e) => handleSubmit(e, "student")}
+>
 
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-slate-700 mb-1">Age</label>
-                  <input
-                    name="age"
-                    type="number"
-                    min={4}
-                    max={18}
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    School (Day School)
-                  </label>
-                  <input
-                    name="school"
-                    type="text"
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-              </div>
+{/* Name */}
+<div>
+<label className="block text-slate-700 mb-1">
+01. සම්පූර්ණ නම
+</label>
+<input
+name="fullName"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    Parent / Guardian Name
-                  </label>
-                  <input
-                    name="parentName"
-                    type="text"
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    Contact Number
-                  </label>
-                  <input
-                    name="contact"
-                    type="text"
-                    required
-                    placeholder="07X XXX XXXX"
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-              </div>
+{/* Name with initials */}
+<div>
+<label className="block text-slate-700 mb-1">
+02. මුලකුරු සමඟ නම
+</label>
+<input
+name="initialName"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div>
-                <label className="block text-slate-700 mb-1">Home Address</label>
-                <input
-                  name="address"
-                  type="text"
-                  required
-                  className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                />
-              </div>
+{/* Address */}
+<div>
+<label className="block text-slate-700 mb-1">
+03. ස්ථිර ලිපිනය
+</label>
+<textarea
+name="address"
+rows={2}
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div>
-                <label className="block text-slate-700 mb-1">
-                  Preferred Class Level
-                </label>
-                <select
-                  name="classLevel"
-                  className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                >
-                  <option>Primary Section</option>
-                  <option>Junior Section</option>
-                  <option>Senior Section</option>
-                </select>
-              </div>
+{/* DOB */}
+<div className="grid gap-4 md:grid-cols-2">
+<div>
+<label className="block text-slate-700 mb-1">
+04. උපන් දිනය
+</label>
+<input
+name="dob"
+type="date"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div>
-                <label className="block text-slate-700 mb-1">
-                  Any important health / special notes (optional)
-                </label>
-                <textarea
-                  name="notes"
-                  rows={3}
-                  className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                />
-              </div>
+<div>
+<label className="block text-slate-700 mb-1">
+05. උපන් ස්ථානය
+</label>
+<input
+name="birthPlace"
+type="text"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+</div>
 
-              <div className="flex items-center gap-3">
-                <button
-                  type="submit"
-                  className="inline-flex justify-center rounded-full bg-amber-600 px-6 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition"
-                >
-                  Submit New Student
-                </button>
-                {studentStatus && (
-                  <p className="text-xs text-slate-600">{studentStatus}</p>
-                )}
-              </div>
-            </form>
+{/* Gender */}
+<div>
+<label className="block text-slate-700 mb-1">
+06. ස්ත්‍රී / පුරුෂ භාවය
+</label>
+<select
+name="gender"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+>
+<option value="">තෝරන්න</option>
+<option>පුරුෂ</option>
+<option>ස්ත්‍රී</option>
+</select>
+</div>
+
+{/* School */}
+<div className="grid gap-4 md:grid-cols-2">
+<div>
+<label className="block text-slate-700 mb-1">
+07. ඉගෙනුම ලබන පාසල
+</label>
+<input
+name="school"
+type="text"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+<div>
+<label className="block text-slate-700 mb-1">
+08. ඉගෙනුම ලබන ශ්‍රේණිය
+</label>
+<input
+name="grade"
+type="text"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+</div>
+
+{/* Parent */}
+<div>
+<label className="block text-slate-700 mb-1">
+09. මව / පියා / භාරකරුගේ නම
+</label>
+<input
+name="parentName"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Phone */}
+<div>
+<label className="block text-slate-700 mb-1">
+10. දුරකථන අංකය
+</label>
+<input
+name="contact"
+type="text"
+required
+placeholder="07X XXX XXXX"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Submit */}
+<div className="flex items-center gap-3">
+<button
+type="submit"
+className="inline-flex justify-center rounded-full bg-amber-600 px-6 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition"
+>
+අයදුම්පත යොමු කරන්න
+</button>
+
+{studentStatus && (
+<p className="text-xs text-slate-600">{studentStatus}</p>
+)}
+</div>
+
+</form>
           </FadeInSection>
         </section>
 
         {/* Prefect Application */}
         <section id="prefect">
           <FadeInSection>
-            <h2 className="section-title">Prefect Application</h2>
+            <h2 className="section-title">ශිෂ්‍යය නායක අයදුම් පත්‍රය</h2>
             <p className="mt-3 text-sm md:text-base text-slate-700">
               This form is for existing students who wish to apply for prefect or
               leadership responsibilities at the Dhamma school.
             </p>
 
             <form
-              className="mt-5 grid gap-4 rounded-2xl bg-white shadow-sm border border-amber-50 px-5 py-5 text-sm"
-              onSubmit={(e) => handleSubmit(e, "prefect")}
-            >
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    Student&apos;s Full Name
-                  </label>
-                  <input
-                    name="studentName"
-                    type="text"
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-slate-700 mb-1">Age</label>
-                  <input
-                    name="age"
-                    type="number"
-                    min={10}
-                    max={20}
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-              </div>
+  className="mt-5 grid gap-4 rounded-2xl bg-white shadow-sm border border-amber-50 px-5 py-5 text-sm"
+  onSubmit={(e) => handleSubmit(e, "prefect")}
+>
 
-              <div className="grid gap-4 md:grid-cols-2">
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    Current Class / Grade at Dhamma School
-                  </label>
-                  <input
-                    name="currentClass"
-                    type="text"
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-                <div>
-                  <label className="block text-slate-700 mb-1">
-                    Years Studied at this Dhamma School
-                  </label>
-                  <input
-                    name="years"
-                    type="number"
-                    min={1}
-                    required
-                    className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                  />
-                </div>
-              </div>
+{/* Full Name */}
+<div>
+<label className="block text-slate-700 mb-1">
+සම්පූර්ණ නම
+</label>
+<input
+name="fullName"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div>
-                <label className="block text-slate-700 mb-1">
-                  Other responsibilities (school prefect, club roles, etc.)
-                </label>
-                <textarea
-                  name="otherRoles"
-                  rows={3}
-                  className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                />
-              </div>
+{/* Date of Birth */}
+<div>
+<label className="block text-slate-700 mb-1">
+උපන්දිනය
+</label>
+<input
+name="dob"
+type="date"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div>
-                <label className="block text-slate-700 mb-1">
-                  Why do you want to become a Dhamma school prefect?
-                </label>
-                <textarea
-                  name="reason"
-                  rows={4}
-                  required
-                  className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                />
-              </div>
+{/* School */}
+<div>
+<label className="block text-slate-700 mb-1">
+ඉගෙනුම ලබන පාසල
+</label>
+<input
+name="school"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div>
-                <label className="block text-slate-700 mb-1">
-                  Parent / Guardian Consent
-                </label>
-                <textarea
-                  name="parentConsent"
-                  rows={3}
-                  placeholder="Eg: I, [Name], the parent/guardian of [student], agree to this application..."
-                  required
-                  className="w-full rounded-md border border-amber-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                />
-              </div>
+{/* Grade */}
+<div>
+<label className="block text-slate-700 mb-1">
+ශ්‍රේණිය
+</label>
+<input
+name="grade"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
 
-              <div className="flex items-center gap-3">
-                <button
-                  type="submit"
-                  className="inline-flex justify-center rounded-full bg-amber-600 px-6 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition"
-                >
-                  Submit Prefect Application
-                </button>
-                {prefectStatus && (
-                  <p className="text-xs text-slate-600">{prefectStatus}</p>
-                )}
-              </div>
-            </form>
+{/* Parent Name */}
+<div>
+<label className="block text-slate-700 mb-1">
+මව / පියා / භාරකරුගේ නම
+</label>
+<input
+name="parentName"
+type="text"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Address */}
+<div>
+<label className="block text-slate-700 mb-1">
+ලිපිනය
+</label>
+<textarea
+name="address"
+rows={3}
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Phone */}
+<div>
+<label className="block text-slate-700 mb-1">
+දුරකථන අංකය
+</label>
+<input
+name="phone"
+type="tel"
+required
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Previous Leadership */}
+<div>
+<label className="block text-slate-700 mb-1">
+මීට පෙර පාසලේ හෝ දහම් පාසලේ ශිෂ්‍ය නායක/නායිකා තනතුරක් දරා තිබේද?
+</label>
+<textarea
+name="previousRoles"
+rows={3}
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Attendance */}
+<div>
+<label className="block text-slate-700 mb-1">
+ගිය වසරේ දහම් පාසලට පැමිණි දින ගණන
+</label>
+<input
+name="attendance"
+type="number"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Poya Sil */}
+<div>
+<label className="block text-slate-700 mb-1">
+ගිය වසරේ පොහෝ දිනවල සිල් සමාදන් වූ වාර ගණන
+</label>
+<input
+name="poya"
+type="number"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Exam Marks */}
+<div>
+<label className="block text-slate-700 mb-1">
+දහම් පාසල වාර්ෂික විභාගයෙන් ලබාගත් ලකුණු
+</label>
+<input
+name="examMarks"
+type="number"
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Dhamma School Activities */}
+<div>
+<label className="block text-slate-700 mb-1">
+දහම් පාසල තුළ සිදු කරන ක්‍රියාකාරකම්
+</label>
+<textarea
+name="dhammaActivities"
+rows={3}
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Other Achievements */}
+<div>
+<label className="block text-slate-700 mb-1">
+වෙනත් බාහිර ක්‍රියාකාරකම් / ජයග්‍රහණ
+</label>
+<textarea
+name="otherActivities"
+rows={3}
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Religious Service */}
+<div>
+<label className="block text-slate-700 mb-1">
+ඔබ විසින් සිදු කරන ආගමික හා සමාජ සේවා
+</label>
+<textarea
+name="services"
+rows={3}
+className="w-full mt-1 mb-4 px-4 py-2 rounded-lg border border-amber-300 
+             text-slate-700 placeholder:text-slate-400
+             focus:outline-none focus:ring-2 focus:ring-amber-500"
+/>
+</div>
+
+{/* Submit */}
+<div className="flex items-center gap-3">
+<button
+type="submit"
+className="inline-flex justify-center rounded-full bg-amber-600 px-6 py-2 text-sm font-semibold text-white hover:bg-amber-700 transition"
+>
+අයදුම්පත යොමු කරන්න
+</button>
+
+{prefectStatus && (
+<p className="text-xs text-slate-600">{prefectStatus}</p>
+)}
+</div>
+
+</form>
           </FadeInSection>
         </section>
       </div>
