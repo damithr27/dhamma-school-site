@@ -68,9 +68,9 @@ export default function RegistrationPage() {
       if (!res.ok) throw new Error("Request failed");
 
       if (type === "student") {
-        setStudentStatus("Successfully submitted. (Demo only)");
+        setStudentStatus("Successfully submitted.");
       } else {
-        setPrefectStatus("Successfully submitted. (Demo only)");
+        setPrefectStatus("Successfully submitted.");
       }
       form.reset();
     } catch (err) {

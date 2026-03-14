@@ -69,9 +69,9 @@ export default function Navbar() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden flex flex-col gap-1"
             >
-              <span className="w-6 h-[2px] bg-amber-900"></span>
-              <span className="w-6 h-[2px] bg-amber-900"></span>
-              <span className="w-6 h-[2px] bg-amber-900"></span>
+              <span className="w-6 h-0.5 bg-amber-900"></span>
+              <span className="w-6 h-0.5 bg-amber-900"></span>
+              <span className="w-6 h-0.5 bg-amber-900"></span>
             </button>
 
             <a
